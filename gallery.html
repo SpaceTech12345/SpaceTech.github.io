@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto+Slab&family=Rubik&display=swap" rel="stylesheet">
+      <title>Gallery</title>
+      
+    </head>
+    <body>
+      <header>
+        <div class="logo"><img src="img/logo.png" alt="space tech"></div>
+        <nav>
+          <div class="menu-icon" onclick="menubtn()">
+            <span class="fas fa-bars"> </span>
+          </div>
+          <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="facts.html">Facts</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+          <div id="search-icon" onclick="searchbtn()">
+            <span class="fas fa-search"></span>
+          </div>
+          <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+          </div>
+          <div id="search">
+            <form action="#">
+              <input type="text" placeholder="Search Here">
+              <button class="fas fa-search"></button>
+            </form>
+          </div>
+        </nav>
+        <div id="searchbox">
+          <input type="text" placeholder="Search Here">
+        </div>
+        <div id="slide-out">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="facts.html">Facts</a></li>
+          <li><a href="about.html">About</a></li>
+        </div>
+      </header>
+      <main id="gallery">
+        <h1 class="page-heading">SPACE TECH'S GALLERY</h1>
+        <div class="row">
+          <div class="column">
+            <img src="img/g1.jpg">
+            <img src="img/g2.jpg">
+            <img src="img/g3.jpg">
+            <img src="img/g4.jpg">
+            <img src="img/g5.jpg">
+            <img src="img/g31.jpg">
+            <img src="img/g7.jpg">
+          </div>
+          <div class="column">
+            <img src="img/g8.jpg">
+            <img src="img/g9.jpg">
+            <img src="img/g10.jpg">
+            <img src="img/g11.jpg">
+            <img src="img/g12.jpg">
+            <img src="img/g13.jpg">
+          </div>
+          <div class="column">
+            <img src="img/g14.jpg">
+            <img src="img/g15.jpg">
+            <img src="img/g16.jpg">
+            <img src="img/g17.jpg">
+            <img src="img/g18.jpg">
+            <img src="img/g19.jpg">
+            <img src="img/g20.jpg">
+          </div>
+          <div class="column">
+            <img src="img/g22.jpg">
+            <img src="img/g23.jpg">
+            <img src="img/g24.jpg">
+            <img src="img/g25.jpg">
+            <img src="img/g26.jpg">
+            <img src="img/g28.jpg">
+            <img src="img/g29.jpg">
+            <img src="img/g30.jpg">
+          </div>
+        </div>
+      </main>
+      <footer>
+        <h1>Follow us on</h1>
+        <div class="social-media">
+          <a href="#" ><i id="facebook" class="fab fa-facebook"></i></a>
+          <a href="#" ><i id="instagram"class="fab fa-instagram"></i></a>
+          <a href="#"><i  id="github" class="fab fa-github"></i></a>
+        </div>
+        <p>This Website Is Created By Navneet and Akshat</p>
+      </footer>
+      <script src="main.js"></script>
+    </body>
+  </html>

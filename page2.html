@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto+Slab&family=Rubik&display=swap" rel="stylesheet">
+      <title>SpaceTech</title>
+    </head>
+    <body>
+      
+      <header>
+        <div class="logo"><img src="img/logo.png" alt="space tech"></div>
+        <nav>
+          <div class="menu-icon" onclick="menubtn()">
+            <span class="fas fa-bars"> </span>
+          </div>
+          <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="facts.html">Facts</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+          <div id="search-icon" onclick="searchbtn()">
+            <span class="fas fa-search"></span>
+          </div>
+          <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+          </div>
+          <div id="search">
+            <form action="#">
+              <input type="text" placeholder="Search Here">
+              <button class="fas fa-search"></button>
+            </form>
+          </div>
+        </nav>
+        <div id="searchbox">
+          <input type="text" placeholder="Search Here">
+        </div>
+        <div id="slide-out">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="facts.html">Facts</a></li>
+          <li><a href="about.html">About</a></li>
+        </div>
+      </header>
+      <main class="page">
+        <h1>DATA PROCESSING SYSTEM</h1>
+        <br><br><br><br><br><br>
+        <img src="img/dps.jpeg" alt="Image">
+        <p class="content">
+          The space shuttle vehicle relies on computerized control and monitoring
+          for successful performance. The data processing system, through the use of
+          various hardware components and its self-contained computer programming
+          (software), provides the vehicle with this monitoring and control.
+          The DPS hardware consists of five general-purpose computers for computation
+          and control, two magnetic tape mass memory units for large-volume bulk storage,
+          a time-shared computer data bus network consisting of serial digital data buses
+          (essentially party lines) to accommodate the data traffic between the GPCs and
+          space shuttle vehicle systems, 19 orbiter and four solid rocket booster
+          multiplexers/demultiplexers to convert and format data from the various vehicle
+          systems, three space shuttle main engine interface units to command the SSMEs,
+          four multifunction CRT display systems used by the flight crew to monitor and
+          control the vehicle and payload systems, two data bus isolation amplifiers
+          to interface with the ground support equipment/launch processing system and
+          the solid rocket boosters, two master events controllers, and a master
+          timing unit.
+          
+          The software stored in and executed by the GPCs is the most sophisticated and
+          complex set of programs ever developed for aero space use. The programs are
+          written to accommodate almost every aspect of space shuttle operations, including orbiter checkout at Rockwell's Palmdale, Calif., assembly facility; space shuttle vehicle prelaunch and final countdown for launch; turnaround activities at the Kennedy Space Center.and eventually Vandenberg Air Force Base; control and monitoring during launch ascent, on-orbit activities, entry and landing; and aborts or other contingency mission phases. A multicomputer mode is used for the critical phases of the mission, such as launch, ascent, entry, landing and aborts.
+          
+          Some of the DPS functions are as follows: support the guidance, navigation and
+          control of the vehicle, including calculations of trajectories, SSME thrusting
+          data and vehicle attitude control data; process vehicle data for the flight crew
+          and for transmission to the ground and allow ground control of some vehicle
+          systems via transmitted commands; check data transmission errors and crew control
+          put errors; support annunciation of vehicle system failures and out-of-tolerance
+          system conditions; support payloads with flight crew/software interface for
+          activation, deployment, deactivation and retrieval; process rendezvous, tracking
+          and data transmissions between payloads and the ground; and monitor and control
+          vehicle subsystems.
+        </p>
+        <br><br><br><br><br><br>
+        
+        <div class="donate">
+          <h3>Wanna help us</h3>
+          <p>Show us some support!!!That would mean a lot.</p>
+          <a href="#"> <button>Donate Now </button></a>
+        </div>
+        <br><br><br><br>
+        <div class="gallery-go">
+          <h3>Love images</h3>
+          <h6>Head to our gallery</h6>
+          <a href="gallery.html"> <button>Gallery</button></a>
+        </div>
+      </main>
+      <footer>
+        <h1>Follow us on</h1>
+        <div class="social-media">
+          <a href="#" ><i id="facebook" class="fab fa-facebook"></i></a>
+          <a href="#" ><i id="instagram"class="fab fa-instagram"></i></a>
+          <a href="#"><i  id="github" class="fab fa-github"></i></a>
+        </div>
+        <p>This Website Is Created By Navneet and Akshat</p>
+      </footer>
+      <script src="main.js"></script>
+    </body>
+  </html>

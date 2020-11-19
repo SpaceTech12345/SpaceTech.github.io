@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto+Slab&family=Rubik&display=swap" rel="stylesheet">
+      <title>SpaceTech</title>
+    </head>
+    <body>
+      
+      <header>
+        <div class="logo"><img src="img/logo.png" alt="space tech"></div>
+        <nav>
+          <div class="menu-icon" onclick="menubtn()">
+            <span class="fas fa-bars"> </span>
+          </div>
+          <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="facts.html">Facts</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+          <div id="search-icon" onclick="searchbtn()">
+            <span class="fas fa-search"></span>
+          </div>
+          <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+          </div>
+          <div id="search">
+            <form action="#">
+              <input type="text" placeholder="Search Here">
+              <button class="fas fa-search"></button>
+            </form>
+          </div>
+        </nav>
+        <div id="searchbox">
+          <input type="text" placeholder="Search Here">
+        </div>
+        <div id="slide-out">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="facts.html">Facts</a></li>
+          <li><a href="about.html">About</a></li>
+        </div>
+      </header>
+      <main class="page">
+        <h1>AVIONICS SYSTEM</h1>
+        <br><br><br><br><br><br>
+        <img src="img/andres-dallimonti-kjqTlMHLci4-unsplash.jpg" alt="Image">
+        <p class="content">The space shuttle avionics system controls,
+          or assists in controlling, most of the shuttle systems. Its
+          functions include automatic determination of the vehicle's
+          status and operational readiness; implementation sequencing
+          and control for the solid rocket boosters and external tank
+          during launch and ascent; performance monitoring; digital data
+          processing; communications and tracking; payload and system
+          management; guidance, navigation and control; and electrical
+          power distribution for the orbiter, external tank and solid
+          rocket boosters.
+          Automatic vehicle flight control can be used for every phase of
+          the mission except docking, which is a manual operation performed
+          by the flight crew. Manual control-referred to as the control stick
+          steering mode-also is available at all times as a flight crew option.
+          
+          The avionics equipment is arranged to facilitate checkout, access
+          and replacement with minimal disturbance to other systems. Almost
+          all electrical and electronic equipment is installed in three areas
+          of the orbiter: the flight deck, the three avionics equipment bays
+          in the middeck of the orbiter crew compartment and the three avionics
+          equipment bays in the orbiter aft fuselage. The flight deck of the
+          orbiter crew compartment is the center of avionics activity, both in
+          flight and on the ground. Before launch, the orbiter avionics system
+          is linked to ground support equipment through umbilical connections.
+          
+          The space shuttle avionics system consists of more than 300 major electronic
+          black boxes located throughout the vehicle, connected by more than 300 miles
+          of electrical wiring. There are approximately 120,400 wire segments and 6,491
+          connectors in the vehicle. The wiring and connectors weigh approximately 7,000
+          pounds, wiring alone weighing approximately 4,600 pounds. Total weight of the
+          black boxes, wiring and connectors is approximately 17,116 pounds.
+          
+          The black boxes are connected to a set of five general-purpose computers through
+          common party lines called data buses. The black boxes offer dual or triple
+          redundancy for every function.
+          
+          The avionics are designed to withstand multiple failures through redundant hardware
+          and software (computer programs) managed by the complex of five computers; this
+          arrangement is called a fail-operational/fail-safe capability. Fail-operational
+          performance means that, after one failure in a system, redundancy management
+          allows the vehicle to continue on its mission. Fail-safe means that after a second
+          failure, the vehicle still is capable of returning to a landing site safely.
+        </p>
+        <br><br><br><br><br><br>
+        
+        <div class="donate">
+          <h3>Wanna help us</h3>
+          <p>Show us some support!!!That would mean a lot.</p>
+          <a href="#"> <button>Donate Now </button></a>
+        </div>
+        <br><br><br><br>
+        <div class="gallery-go">
+          <h3>Love images</h3>
+          <h6>Head to our gallery</h6>
+          <a href="gallery.html"> <button>Gallery</button></a>
+        </div>
+      </main>
+      <footer>
+        <h1>Follow us on</h1>
+        <div class="social-media">
+          <a href="#" ><i id="facebook" class="fab fa-facebook"></i></a>
+          <a href="#" ><i id="instagram"class="fab fa-instagram"></i></a>
+          <a href="#"><i  id="github" class="fab fa-github"></i></a>
+        </div>
+        <p>This Website Is Created By Navneet and Akshat</p>
+      </footer>
+      <script src="main.js"></script>
+    </body>
+  </html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Josefin Sans', sans-serif;
+        }
+        body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Josefin Sans', sans-serif;
+        background-color: #1e272e;
+        }
+        .main{
+        width: 30%;
+        height: 80%;
+        position: relative;
+        background-color: white;
+        box-shadow: 0 0 20px 20px #000 ;
+        }
+
+        @media(max-width: 800px){
+            .main{
+                width: 70%;
+                height: 90%;
+            }
+        }
+
+        @media(max-width: 600px){
+            .main{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .register{
+        width: 95%;
+        height: 85%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        margin-top:35px ;
+        }
+        .register h1{
+        font-size: 35px ;
+        margin-top: -20px;
+        }
+        .register p{
+        font-size: 17px;
+        margin-bottom: 15px;
+        }
+        .register p a{
+        text-decoration: none;
+        color: #ff4757;
+        font-size: 19px;
+        }
+        .form{
+        height: 55px;
+        margin: 10px 25px;
+        width: 80%;
+        position: relative;
+        overflow: hidden;
+        
+        }
+        #first{
+        margin-top: 40px;
+        }
+        .form input{
+        background: transparent;
+        width: 100%;
+        height: 100%;
+        color: grey;
+        border: none;
+        padding-top: 25px;
+        font-size: 20px;
+        outline: none;
+        padding-bottom: 1px;
+        }
+        
+        .form label{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 1px solid black;
+        }
+        .form label::after{
+        position: absolute;
+        content: "";
+        border-bottom: 3px solid #03a9f4 ;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: -1px;
+        transform: translateX(-101%);
+        }
+        .content{
+        position: absolute;
+        bottom: 5px;
+        }
+        .btn-submit{
+        font-size: 18px;
+        padding: 10px;
+        width: 60%;
+        background-color: #03a9f4 ;
+        color:white;
+        border: none;
+        outline: none;
+        border-radius: 15px;
+        margin: 20px auto;
+        cursor: pointer;
+        box-shadow:0 0 4px 4px rgba(0, 0, 0, 0.623) ;
+        }
+        .checkbox{
+        margin-top : 20px;
+        }
+        .form input:focus ~ label::after,
+        .form input:valid ~ label::after {
+        transform: translateX(0);
+        }
+        .form input:focus ~ label .content,
+        .form input:valid ~ label .content{
+        transform: translateY(-110%);
+        color:  #03a9f4;
+        }
+        
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <form  target="_blank" action="index.html">
+                <div class="register">
+                    <h1>Register Now </h1>
+                    <div class="form" id="first">
+                        <input type="text" autocomplete="off" required>
+                        <label class="label-input"for="name">
+                            <span class="content">UserName</span>
+                        </label>
+                    </div>
+                    <div class="form">
+                        <input type="text" autocomplete="off" required>
+                        <label class="label-input"for="name">
+                            <span class="content">Email ID</span>
+                        </label>
+                    </div>
+                    <div class="form">
+                        <input type="password" autocomplete="off" required>
+                        <label class="label-input"for="name">
+                            <span class="content">Password</span>
+                        </label>
+                    </div>
+                    <div class="form">
+                        <input type="password" autocomplete="off" required>
+                        <label class="label-input"for="name">
+                            <span class="content">Confirm Password</span>
+                        </label>
+                    </div>
+                    
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="Terms and Condition">
+                            I've read all terms and conditions
+                        </label>
+                    </div>
+                    
+                    <input type="submit" value="Register" class="btn-submit">
+                    <p>Already a member? <a href="login.html">Login Now</a></p>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

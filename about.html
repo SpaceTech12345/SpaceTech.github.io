@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+            crossorigin="anonymous">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto+Slab&family=Rubik&display=swap" rel="stylesheet">
+            <title>SpaceTech</title>
+        </head>
+        <body>
+            <header>
+                <div class="logo"><img src="img/logo.png" alt="space tech"></div>
+                <nav>
+                    <div class="menu-icon" onclick="menubtn()">
+                        <span class="fas fa-bars"> </span>
+                    </div>
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="facts.html">Facts</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                    <div id="search-icon" onclick="searchbtn()">
+                        <span class="fas fa-search"></span>
+                    </div>
+                    <div class="cancel-icon">
+                        <span class="fas fa-times"></span>
+                    </div>
+                    <div id="search">
+                        <form action="#">
+                            <input type="text" placeholder="Search Here">
+                            <button class="fas fa-search"></button>
+                        </form>
+                    </div>
+                </nav>
+                <div id="searchbox">
+                    <input type="text" placeholder="Search Here">
+                </div>
+                <div id="slide-out">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="facts.html">Facts</a></li>
+                    <li><a href="about.html">About</a></li>
+                </div>
+            </header>
+            <main id="abpage">
+                <div class="about">
+                    <h1>About Us</h1>
+                    <br>
+                    <div class="about-body">
+                        <img src="img/banner-logo.jpeg" alt="SpaceTech">
+                        
+                        <p class="main">
+                            Here at SpaceTech we try to provide you all the news and feeds about space shuttles.
+                            We created this website to share the knowledge of control panels.The information we provide is latest and reliable.
+                            Also this is the first website created by us.We both tried to make is as perfect as we can.
+                        </p>
+                    </div>
+                </div>
+                <div class="donate">
+                    <h3>Wanna help us</h3>
+                    <p>Show us some support!!!That would mean a lot.</p>
+                    <a href="#"> <button>Donate Now </button></a>
+                </div>
+                
+                <br><br><br><br>
+                <div class="gallery-go">
+                    <h3>Intrested in Facts</h3>
+                    <h6>Head to our facts page</h6>
+                    <a href="facts.html"> <button>Facts</button></a>
+                </div>
+            </main>
+            <footer>
+                <h1>Follow us on</h1>
+                <div class="social-media">
+                    <a href="#" ><i id="facebook" class="fab fa-facebook"></i></a>
+                    <a href="#" ><i id="instagram"class="fab fa-instagram"></i></a>
+                    <a href="#"><i  id="github" class="fab fa-github"></i></a>
+                </div>
+                <p>This Website Is Created By Navneet and Akshat</p>
+            </footer>
+            <script src="main.js"></script>
+        </body>
+    </html>

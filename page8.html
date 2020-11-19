@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+            integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto+Slab&family=Rubik&display=swap" rel="stylesheet">
+            <title>SpaceTech</title>
+        </head>
+        <body>
+            
+            <header>
+                <div class="logo"><img src="img/logo.png" alt="space tech"></div>
+                <nav>
+                    <div class="menu-icon" onclick="menubtn()">
+                        <span class="fas fa-bars"> </span>
+                    </div>
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="facts.html">Facts</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    <div id="search-icon" onclick="searchbtn()">
+                        <span class="fas fa-search"></span>
+                    </div>
+                    <div class="cancel-icon">
+                        <span class="fas fa-times"></span>
+                    </div>
+                    <div id="search">
+                        <form action="#">
+                            <input type="text" placeholder="Search Here">
+                            <button class="fas fa-search"></button>
+                        </form>
+                    </div>
+                </nav>
+                <div id="searchbox">
+                    <input type="text" placeholder="Search Here">
+                </div>
+                <div id="slide-out">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="facts.html">Facts</a></li>
+                    <li><a href="about.html">About</a></li>
+                </div>
+            </header>
+            <main class="page">
+                <h1>COMPUTER DATA BUS NETWORK</h1>
+                <br><br><br><br><br><br>
+                <img src="img/computer data bus network.jpg" alt="Image">
+                <p class="content">
+                    The orbiter computer data bus network consists of a group of twisted, shielded wire pairs (data buses) that support the transfer of serial digital commands from the GPCs to vehicle hardware and vehicle systems data to the GPCs. The computer data bus network is divided into specific groups that perform specific functions.
+                    Flight-critical data buses tie the GPCs to flight-critical MDMs, display driver units, head-up displays, main engine interface units and master events controllers. Intercomputer communication data buses are for GPC-to-GPC transactions. Mass memory data buses conduct GPC/mass memory unit transactions. Display keyboard data buses are for GPC/display electronic unit transactions. Instrumentation/pulse code modulation master unit data buses are for GPC/PCMMU transactions. Launch/boost data buses tie the GPCs to ground support equipment, launch forward and launch aft MDMs, solid rocket booster MDMs and the remote manipulator system manipulator control interface unit. Payload data buses tie the GPCs to payload MDMs and the payload data interleaver.
+                    
+                    Although all data buses except the instrumentation/PCMMU buses are connected to all five GPCs, only one GPC at a time controls (transmits commands over) each bus. However, several GPCs may listen (receive data) from the same bus simultaneously. The flight crew can select the GPC that controls a given bus.
+                    
+                    Each data bus, with the exception of the intercomputer communication data buses, is bidirectional; that is, traffic can flow in either direction. The intercomputer communication data bus traffic flows in only one direction.
+                    
+                    There are five intercomputer communication data buses. The following information is exchanged over the IC buses for proper data processing system operation: input/output errors, fault messages, GPC status matrix data, display electronics unit major function switch settings, GPC/CRT keyboard entries, resident GPC memory configuration, memory configuration table, operational sequences, master timing unit, internal GPC time, system-level display information, uplink data and state vector.
+                    
+                    All GPCs processing primary avionics software exchange status information over the IC data buses. During critical mission phases (launch, ascent and entry), usually GPCs 1, 2, 3 and 4 are assigned to perform GN&C tasks, operating as a cooperative redundant set, with GPC 5 as the backup flight system. One of the PASS GPCs acts as a commander of a given data bus in the flight control scheme and initiates all data bus transactions.
+                    
+                    Cross-strapping the four intercomputer communication buses to the four PASS GPCs allows each GPC access to the status of data received or transmitted by the other GPCs so that identical results among the four PASS GPCs can be verified. The four PASS GPCs are loaded with the same software programs. Each IC bus is assigned to one of the four PASS GPCs in the command mode, and the remaining GPCs operate in the listening mode for the bus. Each GPC can receive data with the other three GPCs, pass data to the others, request data from the others and perform any other tasks required to operate the redundant set. In addition, GPC 5 requires certain information to perform its function as the backup flight system because it must listen to the transactions on the IC data bus.
+                    
+                    Flight-critical buses tie the GPCs to flight-critical MDMs, display driver units, head-up displays, main engine interface units and master events controllers. These buses are directed into groups of four compatible with the grouping of four PASS GPCs. Four of these buses-FC1, 2, 3 and 4-connect the GPCs with the four flight-critical forward MDMs, the four aft flight-critical MDMs, the three DDUs and the two HUDs. The other four flight-critical buses-FC5, 6, 7 and 8-connect the GPCs to four forward MDMs, the four aft MDMs, the two mission events controllers and the three main engine interface units. The specific manner in which these units interface is referred to as a string. A string is composed of two flight-critical data buses-one from the first group (FC1, 2, 3 or 4) and one from the second group (FC5, 6, 7 or 8).
+                    
+                    The GPC in the command mode issues data requests and commands to the applicable vehicle systems over its assigned flight-critical (dedicated) bus. The remaining three buses in each group are assigned to the remaining GPCs in the listening mode. A GPC operating in the listening mode can only receive data. Thus, if GPC 1 operates in the command mode on FC1 and FC5, it listens on the three remaining buses. For example, GPC 1 is assigned as the commander of string 1, which includes flight-critical data bus 1 and flight-critical forward MDM 1. GPC 1's transmitter is enabled on FC1, and the three remaining non-commander PASS GPCs need to receive the same redundant information at the same time and verified as consistent identical information; thus, their receivers must also be enabled on FC1 to listen in on the data bus.
+                    
+                    In this example, when all GPCs require a time update from the master timing unit, GPC 1 is the only GPC that actually issues the command to the MTU because it is in command of the intercomputer communication data bus connected to the MDM that interfaces with accumulator 1 of the MTU. All five GPCs receive this time update because they all are listening to the response data transmitted over their own dedicated IC bus.
+                    
+                    Each flight-critical bus in a group of four is commanded by a different GPC. Multiple units of each GN&C hardware item are wired to a different MDM and flight-critical bus.
+                    
+                    In this example, string 1 consists of FC data buses 1 and 5; MDMs flight forward 1 and flight aft 1 and their hard-wired hardware, controls and displays; the three EIUs; the two MECs; the three DDUs; HUD 1; and their associated displays. Thus, four strings are defined in this manner.
+                    
+                    During launch, ascent and entry, when there are four PASS GN&C GPCs, each of the four strings is assigned to a different GPC to maximize redundancy. All flight-critical units are redundant, and the redundant units are on different strings. The string concept provides failure protection during dynamic phases by allowing exclusive command of a specific group of vehicle hardware by one GPC, which can be transferred to another GPC in case of failure. Additional redundancy is provided because each FF and FA MDM is connected to the GPCs by two flight-critical data buses; thus, all or part of one string can be lost and all functions will still be retained through the other string.
+                    
+                    The four display electronics unit keyboard data buses, one for each DEU, are connected to each of the five GPCs. The computer in command of a particular keyboard data bus is a function of the current major func switch setting of the associated CRT, current memory configuration, GPC/CRT keyboard entries and the position of the backup flight control CRT switches.
+                    
+                    Two payload data buses interface the five GPCs with the two payload MDMs (also called payload forward MDMs), which interface with orbiter systems and payloads. A payload data interleaver is connected to payload data bus 1. Each payload MDM is connected to two payload data buses. Up to five safety-critical payload status parameters may be hard-wired; then these parameters and others can be recorded as part of the vehicle's systems management, which is transmitted and received over two payload buses. To accommodate the various forms of payload data, the payload data interleaver integrates payload data for transmission to ground telemetry.
+                    
+                    The five instrumentation/pulse code modulation master unit data buses are unique in that each GPC commands its own individual data bus to two PCMMUs. All the other data buses go to every GPC.
+                    
+                    Flight controllers in the Mission Control Center monitor the status of the vehicle's onboard systems through data transmissions from the vehicle to the ground. These transmissions, called downlink, include GPC-collected data, payload data, instrumentation data and onboard voice. The GPC-collected data, called downlist, includes a set of parameters chosen before flight for each mission phase.
+                    
+                    The system software in each GPC assimilates the specified GN&C, systems management, payload or DPS data according to the premission-defined format for inclusion in the downlist. Each GPC is physically capable of transmitting its downlist to the current active PCMMU over its dedicated instrumentation/PCMMU data bus. Only one PCMMU is powered at a time. It interleaves the downlist data from the different GPCs with the instrumentation and payload data according to the telemetry format load programmed in the PCMMU. The resulting composite data set, called the operational downlink, is transmitted to the network signal processor. Only one NSP is powered at a time. In the NSP, the operational downlink is combined with onboard recorded voice for transmission to the ground. The S-band system transmits the data to the space flight tracking and data network remote site ground stations, which send it to the MCC. Or the downlink is routed through the orbiter's Ku-band system to the Tracking and Data Relay Satellite system.
+                    
+                    Uplink is the method by which ground commands originating in the MCC are formatted, generated and transmitted to the orbiter for validation, processing and eventual execution by onboard software. This capability allows the ground to control software processing, change modes in orbiter hardware and store or change software in GPC memory and mass memory.
+                    
+                    From MCC consoles, operators issue commands and request uplink. The command requests are formatted into a command load for transmission to the orbiter either by the STDN sites and S-band or by the Ku-band system. The S-band or Ku-band transponder receivers aboard the orbiter send the commands to the active network signal processor. The NSP validates the commands until they are requested by the GPCs through an FF MDM. The GPCs also validate the commands before executing them. Those GPCs not listening directly to the flight-critical data buses receive uplink commands over the intercomputer communication data buses.
+                    
+                    The PCMMU also contains a programmable read-only memory for accessing subsystem data, a random-access memory in which to store data and a memory in which GPC data is stored for incorporation into the downlink.
+                    
+                    To prevent the uplink of spurious commands from somewhere other than the MCC, the flight crew can control when the GPCs accept uplink commands and when uplink is blocked. The GPC block position of the uplink NSP switch on panel C3 inhibits uplink commands during ascent and entry when the orbiter is not over a ground station or in TDRS coverage. The flight crew selects this switch position when the capsule communicator at the MCC requests loss-of-signal configuration. The flight crew selects the enable position of the switch during ascent or entry when the capsule communicator requests acquisition-of-signal configuration.
+                    
+                    Two launch data buses, also referred to as launch/boost data buses, are used primarily for ground checkout and launch phase activities. They connect the five GPCs with ground support equipment/launch processing system, the launch forward (LF1) and launch aft (LA1) MDMs aboard the orbiter, and the two left and right SRB MDMs (LL1, LL2, LR1 and LR2). The GSE/LPS interface is disconnected at lift-off by the T-0 umbilical. The solid rocket booster interfaces are disconnected at SRB separation. Launch data bus 1 is used on orbit for interface with the remote manipulator controller by the systems management GPC.
+                    
+                </p>
+                <br><br><br><br><br><br>
+                
+                <div class="donate">
+                    <h3>Wanna help us</h3>
+                    <p>Show us some support!!!That would mean a lot.</p>
+                    <a href="#"> <button>Donate Now </button></a>
+                </div>
+                <br><br><br><br>
+                <div class="gallery-go">
+                    <h3>Love images</h3>
+                    <h6>Head to our gallery</h6>
+                    <a href="gallery.html"> <button>Gallery</button></a>
+                </div>
+            </main>
+            <footer>
+                <h1>Follow us on</h1>
+                <div class="social-media">
+                    <a href="#" ><i id="facebook" class="fab fa-facebook"></i></a>
+                    <a href="#" ><i id="instagram"class="fab fa-instagram"></i></a>
+                    <a href="#"><i  id="github" class="fab fa-github"></i></a>
+                </div>
+                <p>This Website Is Created By Navneet and Akshat</p>
+            </footer>
+            <script src="main.js"></script>
+        </body>
+    </html>

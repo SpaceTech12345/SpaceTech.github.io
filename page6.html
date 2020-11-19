@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+            integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto+Slab&family=Rubik&display=swap" rel="stylesheet">
+            <title>SpaceTech</title>
+        </head>
+        <body>
+            
+            <header>
+                <div class="logo"><img src="img/logo.png" alt="space tech"></div>
+                <nav>
+                    <div class="menu-icon" onclick= "menubtn()">
+                        <span class="fas fa-bars"> </span>
+                    </div>
+                    <ul>
+                        <li><a class="active"href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="facts.html">Facts</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    <div id="search-icon" onclick="searchbtn()">
+                        <span class="fas fa-search"></span>
+                    </div>
+                    <div class="cancel-icon">
+                        <span class="fas fa-times"></span>
+                    </div>
+                    <div id="search">
+                        <form action="#">
+                            <input type="text" placeholder="Search Here">
+                            <button  class="fas fa-search"></button>
+                        </form>
+                    </div>
+                    
+                </nav>
+                <div id="searchbox">
+                    <input type="text" placeholder="Search Here">
+                </div>
+                <div id="slide-out">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="facts.html">Facts</a></li>
+                    <li><a href="about.html">About</a></li>
+                </div>
+            </header>
+            <main class="page">
+                <h1>MULTIFUNCTION CRT DISPLAY SYSTEM</h1>
+                <br><br><br><br><br><br>
+                <img src="img/multi cry display.jpeg" alt="Image">
+                <p class="content">
+                    The MCDS on the orbiter crew compartment flight deck allows onboard monitoring of orbiter systems, computer software processing and manual control for flight crew data and software manipulation.
+                    The system is composed of three types of hardware: display electronics units; display units that include the CRTs; and keyboard units, which together communicate with the GPCs over the display/keyboard data bus network.
+                    The MCDS provides almost immediate response to flight crew inquiries through displays, graphs, trajectory plots and predictions about flight progress. The crew controls the vehicle system operation through the use of keyboards in conjunction with the display units. The flight crew can alter the system configuration, change data or instructions in GPC main memory, change memory configurations corresponding to different mission phases, respond to error messages and alarms, request special programs to perform specific tasks, run through operational sequences for each mission phase and request specific displays.
+                    Three keyboards are located on the flight deck: two on the left and right sides of the flight deck center console (panel C2) and one on the flight deck at the side aft flight station (panel R12). Each consists of 32 momentary double-contact push button keys. Each key uses its double contacts to communicate on separate signal paths to two DEUs. Only one set of contacts on the aft station keys is actually wired because this keyboard can communicate with only the aft display electronics unit.
+                    There are 10 number keys, six letter keys (used for hexadecimal inputs), two algebraic keys, a decimal key, and 13 special key functions. Using these keys, the flight crew can ask the GPC more than 1,000 questions about the mission and condition of the vehicle.
+                    Each of the four DEUs responds to computer commands, transmits data, executes its own software to process keyboard inputs and sends signals to drive displays on the CRTs (or display units). The four DEUs store display data, generate the GPC/keyboard unit and GPC/display unit interface displays, update and refresh on-screen data, check keyboard entry errors and echo entries to the CRT (or DU).
+                    There are three CRTs (or display units) on flight deck forward display and control panel F7 and one at the side aft flight deck station on panel R12. Each CRT is 5 by 7 inches.
+                    The display unit uses a magnetic-deflected, electrostatic-focused CRT. When supplied with deflection signals and video input, the CRT displays alphanumeric characters, graphic symbols and vectors on a green-on-green phosphorous screen activated by a magnetically controlled beam. Each CRT has a brightness control for ambient light and flight crew adjustment.
+                    The DEUs are connected to the display/keyboard data buses by multiplexer interface adapters that function like those of the GPCs. Inputs to the DEU are from a keyboard or a GPC. The CRT switches on panel C2 designate which keyboard controls the forward DEUs and CRT (or DUs). When the left CRT sel switch is positioned to 1, the left keyboard controls the left CRT 1; if positioned to 3, it controls the center CRT 3. When the right CRT sel switch is positioned to 2 , the right keyboard controls the right CRT 2; if positioned to 3 , it controls the center CRT 3. If the left CRT sel and right CRT sel switches are both positioned to 3, keystrokes from both keyboards are interleaved. Thus, flight crew inputs are made on the keyboards and data is output from the GPCs on the CRT displays.
+                    The aft station panel R12 keyboard is connected directly to the aft panel R12 DEU and CRT (or DU); there is no select switch.
+                    Each DEU/DU pair, usually referred to as a CRT, has an associated power switch. The CRT 1 power , on , stby , off switch on panel C2 positioned to stby or on allows control bus power to activate RPCs and sends MNA power to DEU/ DU 1. The stby position warms up the CRT filament. The on position provides high voltage to the CRT. The CRT 2 switch on panel C2 functions the same as the CRT 1 switch, except that CRT 2 is powered from MNB. The CRT 3 switch on panel C2 functions the same as the CRT 1 switch, except that CRT 3 is powered from MNC. The CRT 4 switch on panel R12 functions the same as the CRT 1 switch, except that CRT 4 is powered from MNC. The respective keyboards receive 5 volts of ac power to illuminate the keys. Each DEU/DU pair uses about 300 watts of power when on and about 230 watts in standby.
+                    The CRT 1, 3, 2, major func, GNC, SM and PL switches on panel C2 tell the GPCs which of the different functional software groups is being processed by the keyboard units and what information is presented on the CRT. The CRT 4 , major func, GNC, SM and PL switches on panel R12 function in the same manner.
+                    Positioning the display electronics unit 1 , 2 , 3, 4 switches on panel O6 to load initiates a GPC request for data stored in mass memory through a GPC before operations begin. The information is sent from the mass memory to the GPC and then loaded from the GPC into the DEU memory.
+                    It is possible to do in-flight maintenance and exchange DU 4 with DU 1 or 2. DU 3 cannot be changed out because of the control and display panel configuration. Also, either forward keyboard can be replaced by the aft keyboard. The DEUs are located behind panels in the middeck. DEUs 1 and 3 are on the left, and DEUs 2 and 4 are on the right. DEU 4 can replace any of the others; however, if DEU 2 is to be replaced, only the cables are changed because 2 and 4 are next to each other.
+                    The DEUs and DUs are cooled by the cabin fan system. The keyboard units are cooled by heat dissipation.
+                </p>
+                <br><br><br><br><br><br>
+                
+                <div class="donate">
+                    <h3>Wanna help us</h3>
+                    <p>Show us some support!!!That would mean a lot.</p>
+                    <a href="#"> <button>Donate Now </button></a>
+                </div>
+                <br><br><br><br>
+                <div class="gallery-go">
+                    <h3>Love images</h3>
+                    <h6>Head to our gallery</h6>
+                    <a href="gallery.html"> <button>Gallery</button></a>
+                </div>
+            </main>
+            <footer>
+                <h1>Follow us on</h1>
+                <div class="social-media">
+                    <a href="#" ><i id="facebook" class="fab fa-facebook"></i></a>
+                    <a href="#" ><i id="instagram"class="fab fa-instagram"></i></a>
+                    <a href="#"><i  id="github" class="fab fa-github"></i></a>
+                </div>
+                <p>This Website Is Created By Navneet and Akshat</p>
+            </footer>
+            <script src="main.js"></script>
+        </body>
+    </html>

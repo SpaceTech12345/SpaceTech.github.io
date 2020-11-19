@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+            integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto+Slab&family=Rubik&display=swap" rel="stylesheet">
+            <title>SpaceTech</title>
+        </head>
+        <body>
+            
+            <header>
+                <div class="logo"><img src="img/logo.png" alt="space tech"></div>
+                <nav>
+                    <div class="menu-icon" onclick="menubtn()">
+                        <span class="fas fa-bars"> </span>
+                    </div>
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="facts.html">Facts</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    <div id="search-icon" onclick="searchbtn()">
+                        <span class="fas fa-search"></span>
+                    </div>
+                    <div class="cancel-icon">
+                        <span class="fas fa-times"></span>
+                    </div>
+                    <div id="search">
+                        <form action="#">
+                            <input type="text" placeholder="Search Here">
+                            <button class="fas fa-search"></button>
+                        </form>
+                    </div>
+                </nav>
+                <div id="searchbox">
+                    <input type="text" placeholder="Search Here">
+                </div>
+                <div id="slide-out">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="facts.html">Facts</a></li>
+                    <li><a href="about.html">About</a></li>
+                </div>
+            </header>
+            <main class="page">
+                <h1>MASS MEMORY UNITS</h1>
+                <br><br><br><br><br><br>
+                <img src="img/memory unit.jpeg" alt="Image">
+                <p class="content">MASS MEMORY UNITS
+                    There are two mass memory units aboard the orbiter. Each is a coaxially mounted, reel-to-reel digital magnetic tape storage device for GPC software and orbiter systems data that can be written to or read from. The MMU tape is 602 feet long and 0.5 of an inch wide and has nine tracks (eight data tracks and one control track). These tracks are divided into files and subfiles for finding particular locations.
+                    Computing functions for all mission phases requires approximately 400,000 words of computer memory. The orbiter GPCs are loaded with different memory groups from the MMUs containing the desired program. In this way, software can be stored in MMUs and loaded into the GPCs when actually needed.
+                    
+                    To fit the required software into the available GPC memory space, programs are subdivided into nine memory groups corre sponding to functions executed during specific flight and checkout phases. Thus, in addition to the central memory in the GPCs themselves, 34 million bytes of information can be stored in each of the two mass memory units. Critical programs and data are loaded in both MMUs and protected from erasure.
+                    
+                    The principal function of the MMU, besides storing the basic flight software, is to store background formats for certain CRT displays and the checkpoints that are written periodically to save system data in case the systems management GPC fails.
+                    
+                    MMU operations are controlled by logic and the read and write electronics that activate the proper tape heads (read or write/erase) and validate the data.
+                    
+                    Each MMU interfaces with its mass memory data bus through multiplexer interface adapters, which function like the GPCs. Each mass memory data bus is connected to all five computers; however, each MMU is connected to only one mass memory data bus. All MMU operations are on an on-demand basis only.
+                    
+                    The mass memory units are an advanced form of data storage that fills the gap between slow-access drives of high storage capacity and discs or drums with fast access but relatively low storage capacity.
+                    
+                    The power switches are located on panel O14 for MMU 1 and panel O15 for MMU 2. The MMU 1 switch positioned to on allows control bus power to activate an RPC, which allows MNA power to MMU 1. The MMU 2 switch positioned to on operates in a similar manner with MNB power. A mass memory unit uses 20 watts of power in standby and 50 watts when the tape is moving.
+                    
+                    MMU 1 is located in crew compartment middeck avionics bay 1, and MMU 2 is in avionics bay 2. Each unit is cooled by water coolant loop cold plates. Each MMU is 7.6 inches high, 11.6 inches wide and 15 inches long and weighs 22 pounds.
+                    
+                </p>
+                <br><br><br><br><br><br>
+                
+                <div class="donate">
+                    <h3>Wanna help us</h3>
+                    <p>Show us some support!!!That would mean a lot.</p>
+                    <a href="#"> <button>Donate Now </button></a>
+                </div>
+                <br><br><br><br>
+                <div class="gallery-go">
+                    <h3>Love images</h3>
+                    <h6>Head to our gallery</h6>
+                    <a href="gallery.html"> <button>Gallery</button></a>
+                </div>
+            </main>
+            <footer>
+                <h1>Follow us on</h1>
+                <div class="social-media">
+                    <a href="#" ><i id="facebook" class="fab fa-facebook"></i></a>
+                    <a href="#" ><i id="instagram"class="fab fa-instagram"></i></a>
+                    <a href="#"><i  id="github" class="fab fa-github"></i></a>
+                </div>
+                <p>This Website Is Created By Navneet and Akshat</p>
+            </footer>
+            <script src="main.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+            integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto+Slab&family=Rubik&display=swap" rel="stylesheet">
+            <title>SpaceTech</title>
+        </head>
+        <body>
+            
+            <header>
+                <div class="logo"><img src="img/logo.png" alt="space tech"></div>
+                <nav>
+                    <div class="menu-icon" onclick="menubtn()">
+                        <span class="fas fa-bars"> </span>
+                    </div>
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="facts.html">Facts</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    <div id="search-icon" onclick="searchbtn()">
+                        <span class="fas fa-search"></span>
+                    </div>
+                    <div class="cancel-icon">
+                        <span class="fas fa-times"></span>
+                    </div>
+                    <div id="search">
+                        <form action="#">
+                            <input type="text" placeholder="Search Here">
+                            <button class="fas fa-search"></button>
+                        </form>
+                    </div>
+                </nav>
+                <div id="searchbox">
+                    <input type="text" placeholder="Search Here">
+                </div>
+                <div id="slide-out">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="facts.html">Facts</a></li>
+                    <li><a href="about.html">About</a></li>
+                </div>
+            </header>
+            <main class="page">
+                <h1>SOFTWARE</h1>
+                <br><br><br><br><br><br>
+                <img src="img/software.jpeg" alt="Image">
+                <p class="content">
+                    DPS software is divided into two major groups, system software and applications software. The two software program groups are combined to form a memory configuration for a specific mission phase. The software programs are written in HAL/S (high-order assembly language/shuttle) especially developed for real-time space flight applications.
+                    The system software is the GPC operating software that controls the interfaces among the computers and the rest of the DPS. It is loaded into the computer when it is first initialized. It always resides in the GPC main memory and is common to all memory configurations. The system software controls the GPC input and output, loads new memory configurations, keeps time, monitors discretes into the GPCs and performs many other functions required for the DPS to operate. The system software has nothing to do with orbiter systems or systems management software.
+                    
+                    The system software consists of three sets of programs: the flight computer operating program (the executive) that controls the processors, monitors key system parameters, allocates computer resources, provides for orderly program interrupts for higher priority activities and updates computer memory; the user interface programs that provide instructions for processing flight crew commands or requests; and the system control program that initializes each GPC and arranges for multi-GPC operation during flight-critical phases. The system software program tells the general-purpose computers how to perform and how to communicate with other equipment.
+                    
+                    One of the system software responsibilities is to manage the GPC input and output operations, which includes assigning computers as commanders and listeners on the data buses and exercising the logic involved in sending commands to these data buses at specified rates and upon request from the applications software.
+                    
+                    The applications software contains (1) specific software programs for vehicle guidance, navigation and control required for launch, ascent to orbit, maneuvering in orbit, entry and landing on a runway; (2) systems management programs with instructions for loading memories in the space shuttle main engine computers and for checking the vehicle instrumentation system, aiding in vehicle subsystem checkout, ascertaining that flight crew displays and controls perform properly and updating inertial measurement unit state vectors; (3) payload processing programs with instructions for controlling and monitoring orbiter payload systems that can be revised depending on the nature of the payload; and (4) vehicle checkout programs needed to handle data management, performance monitoring, special processing, and display and control processing.
+                    
+                    The applications software performs the actual duties required to fly and operate the vehicle. To conserve main memory, the applications software is divided into three major functions: guidance, navigation and control; systems management; and payload. Each GPC operates in one major function at a time, and usually more than one computer is in the GN&C major function simultaneously for redundancy.
+                    
+                    The highest level of the applications software is the operational sequence required to perform part of a mission phase. Each OPS is a set of unique software that must be loaded separately into a GPC from the mass memory units. Therefore, all the software residing in a GPC at any time consists of system software and an OPS. An OPS can be further subdivided into groups called major modes, each representing a portion of the OPS mission phase.
+                    
+                    During the transition from one OPS to another, the flight crew requests a new set of applications software to be loaded in from the MMU. Every OPS transition is initiated by the flight crew. An exception is GN&C OPS 1, which is divided into six major modes and contains the OPS 6 return-to-launch-site abort, since there would not be time to load in new software for an RTLS. When an OPS transition is requested, the redundant OPS overlay contains all major modes of that sequence.
+                    
+                    Each major mode has with it an associated CRT display, called an OPS display, that provides the flight crew with information concerning the current portion of the mission phase and allows flight crew interaction. There are three levels of CRT displays. Certain portions of each OPS display can be manipulated by flight crew keyboard input (or ground link) to view and modify system parameters and enter data. The specialist function of the OPS software is a block of displays associated with one or more operational sequences and enabled by the flight crew to monitor and modify system parameters through keyboard entries. The display function of the OPS software is a block of displays associated with one OPS or more. These displays are for parameter monitoring only (no modification capability) and are called from the keyboard.
+                    
+                    The principal software used to operate the vehicle during a mission is the primary avionics software system. It contains all the programming needed to fly the vehicle through all phases of the mission and manage all vehicle and payload systems.
+                    
+                    Since the ascent and entry phases of flight are so critical, four of the five GPCs are loaded with the same PASS software and perform all GN&C functions simultaneously and redundantly. As a safety measure, the fifth GPC contains a different set of software, programmed by a company different from the PASS developer, designed to take control of the vehicle if a generic error in the PASS software or other multiple errors should cause a loss of vehicle control. This software is called the backup flight system. In the less dynamic phases of on-orbit operations, the BFS is not required.
+                    
+                    GPCs running together in the same GN&C OPS are part of a redundant set performing identical tasks from the same inputs and producing identical outputs. Therefore, any data bus assigned to a commanding GN&C GPC is heard by all members of the redundant set (except the instrumentation buses because each GPC has only one dedicated bus connected to it). These transmissions include all CRT inputs and mass memory transactions, as well as flight-critical data. Thus, if one or more GPCs in the redundant set fail, the remaining computers can continue operating in GN&C. Each GPC performs about 325,000 operations per second during critical phases.
+                    
+                    Each computer in a redundant set operates in synchronized steps and cross-checks results of processing about 440 times per second. Synchronization refers to the software scheme used to ensure simultaneous intercomputer communications of necessary GPC status information among the primary avionics computers. If a GPC operating in a redundant set fails to meet two redundant synchronization codes in a row, the remaining computers will vote it out of the redundant set. Or if a GPC has a problem with its multiplexer interface adapter receiver during two successive reads of response data and does not receive any data while the other members of the redundant set do not receive the data, they in turn will vote the GPC out of the set. A failed GPC is halted as soon as possible.
+                    
+                    GPC failure votes are annunciated in a number of ways. The GPC status matrix on panel O1 is a 5-by-5 matrix of lights. For example, if GPC 2 sends out a failure vote against GPC 3, the second white light in the third column is illuminated. The yellow diagonal lights from upper left to lower right are self-failure votes. Whenever a GPC receives two or more failure votes from other GPCs, it illuminates its own yellow light and resets any failure votes that it made against other GPCs (any white lights in its row are extinguished). Any time a yellow matrix light is illuminated, the GPC red caution and warning light on panel F7 is illuminated, in addition to master alarm illumination, and a GPC fault message is displayed on the CRT.
+                    
+                </p>
+                <br><br><br><br><br><br>
+                
+                <div class="donate">
+                    <h3>Wanna help us</h3>
+                    <p>Show us some support!!!That would mean a lot.</p>
+                    <a href="#"> <button>Donate Now </button></a>
+                </div>
+                <br><br><br><br>
+                <div class="gallery-go">
+                    <h3>Love images</h3>
+                    <h6>Head to our gallery</h6>
+                    <a href="gallery.html"> <button>Gallery</button></a>
+                </div>
+            </main>
+            <footer>
+                <h1>Follow us on</h1>
+                <div class="social-media">
+                    <a href="#" ><i id="facebook" class="fab fa-facebook"></i></a>
+                    <a href="#" ><i id="instagram"class="fab fa-instagram"></i></a>
+                    <a href="#"><i  id="github" class="fab fa-github"></i></a>
+                </div>
+                <p>This Website Is Created By Navneet and Akshat</p>
+            </footer>
+            <script src="main.js"></script>
+        </body>
+    </html>

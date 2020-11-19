@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+            integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto+Slab&family=Rubik&display=swap" rel="stylesheet">
+            <title>SpaceTech</title>
+        </head>
+        <body>
+            
+            <header>
+                <div class="logo"><img src="img/logo.png" alt="space tech"></div>
+                <nav>
+                    <div class="menu-icon" onclick="menubtn()">
+                        <span class="fas fa-bars"> </span>
+                    </div>
+                    <ul>
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="facts.html">Facts</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                    <div id="search-icon" onclick="searchbtn()">
+                        <span class="fas fa-search"></span>
+                    </div>
+                    <div class="cancel-icon">
+                        <span class="fas fa-times"></span>
+                    </div>
+                    <div id="search">
+                        <form action="#">
+                            <input type="text" placeholder="Search Here">
+                            <button class="fas fa-search"></button>
+                        </form>
+                    </div>
+                </nav>
+                <div id="searchbox">
+                    <input type="text" placeholder="Search Here">
+                </div>
+                <div id="slide-out">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="facts.html">Facts</a></li>
+                    <li><a href="about.html">About</a></li>
+                </div>
+            </header>
+            <main class="page">
+                <h1>MASTER TIMING UNIT</h1>
+                <br><br><br><br><br><br>
+                <img src="img/deliveryService-1" alt="Image">
+                <p class="content">
+                    The GPC complex requires a stable, accurate time source because its software uses Greenwich Mean Time to schedule processing. Each GPC uses the master timing unit to update its internal clock. The MTU provides precise frequency outputs for various timing and synchronization purposes to the GPC complex and many other orbiter subsystems. Its three time accumulators provide GMT and mission elapsed time, which can be updated by external control. The accumulator's timing is in days, hours, minutes, seconds, and milliseconds up to one year.
+                    The master timing unit is a stable, crystal-controlled frequency source that uses two oscillators for redundancy. The signals from one of the two oscillators are passed through signal shapers and frequency drivers to the three GMT/MET accumulators.
+                    The MTU outputs serial digital time data (GMT/MET) on demand to the GPCs through the accumulators. The GPCs use this information for their reference time and indirectly for time-tagging GN&C and systems management processing. The MTU also provides continuous digital timing outputs to drive the four digital timers in the crew compartment-two mission timers and two event timers. In addition, the MTU also provides signals to the pulse code modulation master units, payload signal processor and FM signal processor, as well as various payloads.
+                    The GPCs start by using MTU accumulator 1 as their time source. Every second, each GPC checks the accumulator time against its own internal time. If the time is within tolerance (less than one millisecond), the GPC updates its internal clock to the time of the accumulator, which is more accurate, and continues to use that accumulator. However, if the time is out of tolerance, the GPC will try the other MTU accumulators and then the lowest numbered GPC until it finds a successful comparison.
+                    The GPCs do not use the mission elapsed time that they receive from the master timing unit because flag compute MET on the basis of current GMT and lift-off time.
+                    The master timing unit is redundantly powered by the MTU A and MTU B circuit breakers on panel O13. The master timing unit OSC 1, auto, OSC 2 switch on panel O6 controls the MTU. When the switch is in auto and a time signal from the MTU is out of tolerance, the MTU automatically switches to the other oscillator. Normally, the MTU is activated by oscillator 1 with the switch in auto . The OSC 1 or OSC 2 position, manually selects OSC 1 or OSC 2.
+                    The MTU is located in crew compartment middeck avionics bay 3B and is cooled by a water coolant loop cold plate. The only hardware displays associated with the MTU are the mission and event timers. The mission timers are located on panels O3 and A4. They can display either GMT or MET in response to the GMT or MET switch positions. The forward event timer is on panel F7 and its control switches are on panel C2. The aft event timer is on panel A4 and its control switches are on panel A6.
+                    The master timing unit contractor is Westinghouse Electric Corp., Systems Development Division, Baltimore, Md.
+                </p>
+                <br><br><br><br><br><br>
+                
+                <div class="donate">
+                    <h3>Wanna help us</h3>
+                    <p>Show us some support!!!That would mean a lot.</p>
+                    <a href="#"> <button>Donate Now </button></a>
+                </div>
+                <br><br><br><br>
+                <div class="gallery-go">
+                    <h3>Love images</h3>
+                    <h6>Head to our gallery</h6>
+                    <a href="gallery.html"> <button>Gallery</button></a>
+                </div>
+            </main>
+            <footer>
+                <h1>Follow us on</h1>
+                <div class="social-media">
+                    <a href="#" ><i id="facebook" class="fab fa-facebook"></i></a>
+                    <a href="#" ><i id="instagram"class="fab fa-instagram"></i></a>
+                    <a href="#"><i  id="github" class="fab fa-github"></i></a>
+                </div>
+                <p>This Website Is Created By Navneet and Akshat</p>
+            </footer>
+            <script src="main.js"></script>
+        </body>
+    </html>
