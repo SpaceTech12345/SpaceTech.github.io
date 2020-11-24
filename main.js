@@ -13,14 +13,6 @@ window.onload= function(){
     slide.style.display="none";
 }
 
-searchbtn=()=>{
-var search= document.getElementById('bar');
-if(search.style.display === "block"){
-search.style.display="none";
-}else{
-search.style.display="block";
-}
-}
 const searchIcon = document.getElementById("search-icon");
 const searchBox = document.getElementById("searchbox");
 searchIcon.addEventListener('click', function () {
